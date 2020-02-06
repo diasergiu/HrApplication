@@ -1,0 +1,36 @@
+<p>user-create works!</p>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="idUser" [value]="user.idUser">
+    <div class="form-group">
+        <div class="input-group">
+            <input name="userName" #userName="ngModel" [(ngModel)]="user.userName" class="form-control" placeholder="User name">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <input name="firstName" #firstName="ngModel" [(ngModel)]="user.firstName" class="form-control" placeholder="First name">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <input name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName" class="form-control" placeholder="Second name">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <input name="password" type="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" placeholder="password">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <input type="file" #Image  accept="image/*">
+        </div>
+    </div>
+    <div class="form-Group">
+        <button class="btn btn-lg" type="Submit">Save New User</button>
+    </div>
+</form>>

@@ -1,0 +1,87 @@
+﻿@model HrBackEnd.netCore.Entitys.Candidate
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Candidate</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="expectedSalary" class="control-label"></label>
+                <input asp-for="expectedSalary" class="form-control" />
+                <span asp-validation-for="expectedSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="salary" class="control-label"></label>
+                <input asp-for="salary" class="form-control" />
+                <span asp-validation-for="salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="firstName" class="control-label"></label>
+                <input asp-for="firstName" class="form-control" />
+                <span asp-validation-for="firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lastName" class="control-label"></label>
+                <input asp-for="lastName" class="form-control" />
+                <span asp-validation-for="lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CV" class="control-label"></label>
+                <input asp-for="CV" class="form-control" />
+                <span asp-validation-for="CV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="coverLetter" class="control-label"></label>
+                <input asp-for="coverLetter" class="form-control" />
+                <span asp-validation-for="coverLetter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phoneDate" class="control-label"></label>
+                <input asp-for="phoneDate" class="form-control" />
+                <span asp-validation-for="phoneDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="interviewDate" class="control-label"></label>
+                <input asp-for="interviewDate" class="form-control" />
+                <span asp-validation-for="interviewDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cobyDate" class="control-label"></label>
+                <input asp-for="cobyDate" class="form-control" />
+                <span asp-validation-for="cobyDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="startDate" class="control-label"></label>
+                <input asp-for="startDate" class="form-control" />
+                <span asp-validation-for="startDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idPostAccepted" class="control-label"></label>
+                <select asp-for="idPostAccepted" class ="form-control" asp-items="ViewBag.idPostAccepted"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
